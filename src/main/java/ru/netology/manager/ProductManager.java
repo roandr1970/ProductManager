@@ -1,8 +1,9 @@
-package ru.netology.repository;
+package ru.netology.manager;
 
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
+import ru.netology.repository.ProductRepository;
 
 public class ProductManager {
 
@@ -12,9 +13,6 @@ public class ProductManager {
         this.repository = repository;
     }
 
-    public ProductManager() {
-
-    }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
@@ -39,7 +37,6 @@ public class ProductManager {
                 return true;
             }
         }
-        return false;
 
         if (product instanceof Smartphone) {
             Smartphone smartphone = (Smartphone) product;
@@ -50,8 +47,8 @@ public class ProductManager {
                 return true;
             }
         }
-        return false;
 
+        return false;
     }
 
     public void add(Product product) { repository.save(product); }
