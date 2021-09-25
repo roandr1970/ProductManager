@@ -29,7 +29,7 @@ public class ProductManager {
 
     public boolean matches(Product product, String search) {
         if (product instanceof Book) { // если в параметре product лежит объект класса Book
-            Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
+            Book book = (Book) product; // положим его в переменную типа Book, чтобы пользоваться методами класса Book
             if (book.getAuthor().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
                 return true;
             }
@@ -51,5 +51,7 @@ public class ProductManager {
         return false;
     }
 
-    public void add(Product product) { repository.save(product); }
+    public void add(Product product) {
+        repository.save(product);
+    }
 }

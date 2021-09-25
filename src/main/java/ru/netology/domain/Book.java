@@ -3,7 +3,7 @@ package ru.netology.domain;
 import java.util.Collection;
 import java.util.Objects;
 
-public class Book extends Product{
+public class Book extends Product {
     private String author;
 
     public Book(int id, String name, int price, String author) {
@@ -14,7 +14,7 @@ public class Book extends Product{
     public String getAuthor() {
         return author;
     }
-/*
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,6 +35,4 @@ public class Book extends Product{
                 "author='" + author + '\'' +
                 '}';
     }
-*/
-
 }
