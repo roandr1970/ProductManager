@@ -26,7 +26,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldTwoProducts() {
+    public void shouldProductNameSmartphone() {
 
         Product[] actual = manager.searchBy("samsung");
         Product[] expected = new Product[] { second, third };
@@ -34,7 +34,23 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldOneProduct() {
+    public void shouldProductNameBook() {
+
+        Product[] actual = manager.searchBy("Windows 11");
+        Product[] expected = new Product[] { first };
+        assertArrayEquals (expected, actual);
+    }
+
+    @Test
+    public void shouldTwoProductsManufactured() {
+
+        Product[] actual = manager.searchBy("Korea");
+        Product[] expected = new Product[] { second, third };
+        assertArrayEquals (expected, actual);
+    }
+
+    @Test
+    public void shouldOneProductAuthor() {
 
         Product[] actual = manager.searchBy("Bill");
         Product[] expected = new Product[] { first };

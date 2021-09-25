@@ -11,18 +11,10 @@ public class Book extends Product{
         this.author = author;
     }
 
-    public Book() {
-        super();
-    }
-
     public String getAuthor() {
         return author;
     }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
+/*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,6 +35,6 @@ public class Book extends Product{
                 "author='" + author + '\'' +
                 '}';
     }
-
+*/
 
 }
